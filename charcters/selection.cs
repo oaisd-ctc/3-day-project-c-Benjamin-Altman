@@ -1,12 +1,10 @@
 namespace CrimsonDungeonDemo;
 public class Selection
 {
-	public string Name { get; }
 	public string Class { get; }
 
-	public Selection(string name, string @class)
+	public Selection()
 	{
-		Name = name;
-		Class = @class;
+
 	}
 }
