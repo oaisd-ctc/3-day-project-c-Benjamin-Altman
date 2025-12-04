@@ -2,6 +2,7 @@ namespace CrimsonDungeonDemo
 {
     public class Monsters
     {
+        public string Class { get; set; }
         public int Health { get; set; }
         public int Strength { get; set; }
         public int Defense { get; set; }
@@ -9,7 +10,7 @@ namespace CrimsonDungeonDemo
         public int Intelligence { get; set; }
         public int Dexterity { get; set; }
 
-        public Monsters(int health, int strength, int defense, int speed, int intelligence, int dexterity)
+        public Monsters(string monsterClass, int health, int strength, int defense, int speed, int intelligence, int dexterity)
         {
             Health = health;
             Strength = strength;
@@ -17,11 +18,12 @@ namespace CrimsonDungeonDemo
             Speed = speed;
             Intelligence = intelligence;
             Dexterity = dexterity;
+            Class = monsterClass;
         }
 
         public virtual void MonsterStats()
         {
-            Console.WriteLine($"Health: {Health}, Strength: {Strength}, Defense: {Defense}, Speed: {Speed}, Intelligence: {Intelligence}, Dexterity: {Dexterity}");
+            Console.WriteLine($"Class: {Class}, Health: {Health}, Strength: {Strength}, Defense: {Defense}, Speed: {Speed}, Intelligence: {Intelligence}, Dexterity: {Dexterity}");
         }
     }
 }
