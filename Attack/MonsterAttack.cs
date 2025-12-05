@@ -10,5 +10,9 @@ namespace CrimsonDungeonDemo
         {
             return strength * 2;
         }
+        public int BaseHealth(int health)
+        {
+            return health * 5;
+        }
     }
 }
