@@ -2,24 +2,34 @@ namespace CrimsonDungeonDemo
 {
     public class PlayerAttack : Player
     {
-        public int damage { get; set; }
-        public int baseHealth { get; set; }
-
-        public int Damage(int damage)
+        public PlayerAttack(string name, string playerClass, int health, int strength, int defense) 
+            : base(name, playerClass, health, strength, defense)
         {
-            damage = Strength * 2;
-            return damage;
         }
 
-        public int BaseHealth(int baseHealth)
+        public int Damage()
         {
-            baseHealth = Health * 5;
-            return baseHealth;
+            return Strength * 2;
         }
 
-        public void Battle()
+        public int BaseHealth()
         {
+            return Health * 5;
+        }
+
+        public void Battle(MonsterAttack monster)
+        {
+            int playerDamage = Damage();
+            int monsterDamage = monster.Damage(monster.Strength);
             
+            Console.WriteLine($"{Name} attacks {monster.Name} for {playerDamage} damage!");
+            monster.Health -= playerDamage;
+            
+            if (monster.Health > 0)
+            {
+                Console.WriteLine($"{monster.Name} attacks {Name} for {monsterDamage} damage!");
+                Health -= monsterDamage;
+            }
         }
     }
 }
