@@ -2,7 +2,7 @@ namespace CrimsonDungeonDemo;
 
 using CrimsonDungeonDemo;
 
-public static class CharacterSelection
+public static class CharacterSelection 
 {
 	public static Character? PlayerCharacter; //stores class chosen
 
