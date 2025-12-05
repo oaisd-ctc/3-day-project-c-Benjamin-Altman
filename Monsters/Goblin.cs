@@ -2,7 +2,7 @@ namespace CrimsonDungeonDemo
 {
     public class Goblin : Monsters
     {
-        public Goblin(string Class) : base("Goblin", 4, 3, 2, 6, 1, 2) { }
+        public Goblin(string Class) : base(Class, 4, 3, 2, 6, 1, 2) { }
 
         public override void MonsterStats()
     {
