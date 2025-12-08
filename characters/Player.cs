@@ -2,17 +2,22 @@ namespace CrimsonDungeonDemo
 {
     public class Player : Character
     {
-        public Player(string name, string characterClass, int health, int strength, int defense, int speed = 10, int intelligence = 10, int dexterity = 10) : base(name, characterClass, health, strength, defense, speed, intelligence, dexterity)
+        public Player(string name, string characterClass, int hp, int strength, int defense) : base(name, characterClass, hp, strength, defense)
         {
         }
         public int Damage()
         {
             return Strength * 2;
         }
+        
 
-        public int BaseHealth()
+        public void TakeDamage(int damageAmount)
         {
-            return Health * 5;
+            HP -= damageAmount;
+            if (HP < 0)
+                HP = 0;
         }
+
+        public bool IsAlive => HP > 0;
     }
 }
