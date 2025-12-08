@@ -3,11 +3,11 @@
 public class Program
 {
 	
-	public class GoblinCs { public void DoSomething() { Console.WriteLine("Class A doing something."); } }
-	public class SkeletonCs { public void DoSomething() { Console.WriteLine("Class B doing something."); } }
-	public class SlimeCs { public void DoSomething() { Console.WriteLine("Class C doing something."); } }
-	public class SpiderCs { public void DoSomething() { Console.WriteLine("Class D doing something."); } }
-	public class ZombieCs { public void DoSomething() { Console.WriteLine("Class E doing something."); } }
+	public class GoblinCs { public void DoSomething() { Console.WriteLine("You enter a battle with a goblin."); } }
+	public class SkeletonCs { public void DoSomething() { Console.WriteLine("You enter a battle with a skeleton."); } }
+	public class SlimeCs { public void DoSomething() { Console.WriteLine("You enter a battle with a slime."); } }
+	public class SpiderCs { public void DoSomething() { Console.WriteLine("You enter a battle with a spider."); } }
+	public class ZombieCs { public void DoSomething() { Console.WriteLine("You enter a battle with a zombie."); } }
 	public class MonsterSelector
 	{
 		private static Random _random = new Random();
