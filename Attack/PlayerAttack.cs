@@ -22,12 +22,12 @@ namespace CrimsonDungeonDemo
             int playerDamage = Damage();
             int monsterDamage = monster.Damage(monster.Strength);
             
-            Console.WriteLine($"{Name} attacks {monster.Name} for {playerDamage} damage!");
+            Console.WriteLine($"{Name} attacks {monster.Class} for {playerDamage} damage!");
             monster.Health -= playerDamage;
             
             if (monster.Health > 0)
             {
-                Console.WriteLine($"{monster.Name} attacks {Name} for {monsterDamage} damage!");
+                Console.WriteLine($"{monster.Class} attacks {Name} for {monsterDamage} damage!");
                 Health -= monsterDamage;
             }
         }

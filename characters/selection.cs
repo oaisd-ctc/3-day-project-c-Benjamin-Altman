@@ -1,6 +1,5 @@
 namespace CrimsonDungeonDemo;
 
-using CrimsonDungeonDemo;
 
 public static class CharacterSelection 
 {
@@ -36,5 +35,6 @@ public static class CharacterSelection
 
 		Console.WriteLine($"You have chosen the {PlayerCharacter?.GetType().Name} class.");
 		PlayerCharacter?.ClassStats();
+
 	}
 }
