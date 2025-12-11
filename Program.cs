@@ -1,3 +1,4 @@
+
 ﻿namespace CrimsonDungeonDemo;
 
 public class Program

@@ -2,7 +2,9 @@ namespace CrimsonDungeonDemo
 {
     public class Slime : Monsters
     {
+
         public Slime(string Class) : base(Class, 60, 2, 2, 2, 2, 2) { }
+
 
         public override void MonsterStats()
     {
