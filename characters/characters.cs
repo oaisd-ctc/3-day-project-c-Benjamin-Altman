@@ -41,7 +41,7 @@ public class Character
 
 public class Warrior : Character
 {
-    public Warrior(string name, string Class) : base(name, Class, 75, 13, 11) { }
+    public Warrior(string name, string Class) : base(name, Class, 190, 11, 11) { }
 
     public override void ClassStats()
     {
@@ -50,7 +50,7 @@ public class Warrior : Character
 }
 public class Mage : Character
 {
-    public Mage(string name, string Class) : base(name, Class, 35, 9, 6) { }
+    public Mage(string name, string Class) : base(name, Class, 105, 9, 6) { }
 
     public override void ClassStats()
     {
@@ -59,7 +59,7 @@ public class Mage : Character
 }
 public class Archer : Character
 {
-    public Archer(string name, string Class) : base(name, Class, 25, 7, 8) { }
+    public Archer(string name, string Class) : base(name, Class, 95, 7, 8) { }
 
     public override void ClassStats()
     {
