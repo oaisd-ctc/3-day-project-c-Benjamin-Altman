@@ -16,12 +16,27 @@ public class Character
         Strength = strength;
         Defense = defense;
         Class = characterClass;
+        HP = health; // Initialize HP to health
     }
 
     public virtual void ClassStats()
     {
         Console.WriteLine($"Name: {Name}, Class: {Class}, HP: {HP}, Strength: {Strength}, Defense: {Defense}");
     }
+
+    public virtual int Damage()
+    {
+        return Strength * 2;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        HP -= damageAmount;
+        if (HP < 0)
+            HP = 0;
+    }
+
+    public bool IsAlive => HP > 0;
 }
 
 public class Warrior : Character
