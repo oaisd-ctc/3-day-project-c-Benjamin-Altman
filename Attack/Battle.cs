@@ -17,11 +17,7 @@ namespace CrimsonDungeonDemo
                 monster.Health -= playerDamage;
                 Console.WriteLine($"You deal {playerDamage} damage. Monster health: {monster.Health}");
 
-                if (monster.Health <= 0)
-                {
-                    Console.WriteLine("You win!");
-                    return;
-                }
+                
 
                 // Monster turn
                 Console.WriteLine("Monster's turn.");
@@ -35,6 +31,13 @@ namespace CrimsonDungeonDemo
                     Console.WriteLine("You lose!");
                     return;
                 }
+                if (monster.Health <= 0)
+                {
+                    Console.WriteLine("You win the battle!");
+                    Console.WriteLine("A new monster appears!");
+                    return;
+                }
+
             }
         }
     }

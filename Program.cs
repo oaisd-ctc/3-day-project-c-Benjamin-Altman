@@ -14,7 +14,9 @@ public class Program
 				new Skeleton("Skeleton"),
 				new Slime("Slime"),
 				new Spider("Spider"),
-				new Zombie("Zombie")
+				new Zombie("Zombie"),
+				new Secret("Mr. Luyk"),
+				new Secret("Mr. Martinez")
 			};
 			int randomIndex = _random.Next(0, monsters.Count);
 			return monsters[randomIndex];
@@ -29,7 +31,6 @@ public class Program
 			Console.WriteLine($"You encounter a {randomMonster.Class}!");
 			randomMonster.MonsterStats();
 			
-			// Start battle
 			Battle.StartBattle(CharacterSelection.PlayerCharacter, randomMonster);
 		}
 	}
